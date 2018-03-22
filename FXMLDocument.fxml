@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="barchart.FXMLDocumentController">
+   <children>
+      <Pane layoutY="1.0" prefHeight="452.0" prefWidth="461.0">
+         <children>
+            <PieChart fx:id="pieChart" prefHeight="329.0" prefWidth="461.0" />
+            <BarChart fx:id="barChart" layoutX="17.0" prefHeight="338.0" prefWidth="426.0" title="Character Histogram">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <HBox alignment="CENTER" layoutX="3.0" layoutY="354.0" prefHeight="92.0" prefWidth="453.0">
+               <children>
+                  <ComboBox fx:id="chartComboBox" prefWidth="150.0" promptText="bar chart">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <Button fx:id="inputDataButton" mnemonicParsing="false" onAction="#didClickInputButton" text="Input Data">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="closeButton" mnemonicParsing="false" onAction="#didClickCloseButton" text="Close">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="216.0" layoutY="346.0" text="Char" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
